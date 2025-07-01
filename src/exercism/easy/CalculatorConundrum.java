@@ -11,20 +11,20 @@ with arguments 16, 51 and +.
  */
 class CalculatorConundrum{
     public String calculate(int operand1, int operand2, String operation) {
-        if (operation == null) {
-            throw new IllegalArgumentException("Operation cannot be null");
-        }
-        else if (operation.equals("")) {
-            throw new IllegalArgumentException("Operation cannot be empty");
-        }
-        else if (!operation.equals("+") && !operation.equals("*") && !operation.equals("/")) {
+//        if (operation == null) {
+//            throw new IllegalArgumentException("Operation cannot be null");
+//        }
+//        else if (operation.equals("")) {
+//            throw new IllegalArgumentException("Operation cannot be empty");
+//        }
+        if (!"+".equals(operation) && !"*".equals(operation) && !"/".equals(operation)) {
             throw new UnsupportedOperationException("Operation '" + operation + "' does not exist");
         }
         else {
-            if (operation.equals("+")) {
+            if ("+".equals(operation)) {
                 return operand1 + " + " + operand2 + " = " + (operand1 + operand2);
             }
-            else if (operation.equals("*")) {
+            else if ("*".equals(operation)) {
                 return operand1 + " * " + operand2 + " = " + (operand1 * operand2);
             }
             else {
