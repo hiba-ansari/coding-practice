@@ -14,12 +14,7 @@ public class LanguageList {
     private final List<String> languages = new ArrayList<>();
 
     public boolean isEmpty() {
-        if (languages.isEmpty()) {
-            return true;
-        }
-        else {
-            return false;
-        }
+        return languages.isEmpty();
     }
 
     public void addLanguage(String language) {
